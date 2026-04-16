@@ -1,0 +1,385 @@
+
+ /* Styling my website decorations */
+
+*{
+  margin: 0;                  /* Remove default spacing around the website elements */
+  padding: 0;                 /* Remove default spacing inside the website elements */
+  box-sizing: border-box;     /* Consistent box modelling */
+  font-family: "poppins";     /* Modern, clean font */
+  scroll-behavior: smooth;    /* Smooth scrolling for anchor links */
+  list-style: none;           /* Remove column list styling */
+  text-decoration: none;      
+}
+
+/* Header styling */
+
+header {
+  position: fixed;            /* Fix the header at the top of the page */
+  top: 2rem;                 /* Space from the top of the page */
+  left: 50%;                 /* Center the header horizontally */
+  transform: translateX(-50%);      
+  display: flex;                  /* Flexbox for horizontal layout */
+  justify-content: center;
+  align-items: center;             /* setting the header position*/
+  gap: 5rem;                       /* Space between logo and navigation links */
+  padding: 0.5rem 1.5rem;
+  background-color: black;
+  color: white;                  /* Semi-transparent background text color */
+  backdrop-filter: blur(8px);
+  border-radius: 3rem;             /* Rounded corners for of the navigation bar */
+  z-index: 1000;                   /* Ensure the header stays above other content */
+}
+
+/* Logo and navigation styling */
+
+.logo {
+  color: white;     /* Logo text color */
+  font-size: 2rem;
+  font-weight: 600;      /* Semi-bold for better visibility */
+  text-wrap: nowrap;     /* Prevent logo text from wrapping */
+  transition: all 0.3s ease-in;        /* Smooth transition for hover effect */
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+}
+
+li a {
+  position: relative;
+  color: white;
+  font-weight: 600;   /* bolder */
+  font-size: 1.6rem;  /* larger font */
+}
+  /* Underline effect for navigation links */
+li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 5px;
+  top: 25px;
+  border-radius: 1rem;
+  background: linear-gradient(to right, rgb(0,157,225), rgb(225,0,225));
+  transition: all 0.3s ease-in-out;
+  transform: scaleX(0);
+}
+
+li a:hover::before {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.go-to-btn {
+  padding: 0.8rem 11.5rem;     /* Increased padding for a larger button */
+  color: white;
+  border-radius: 3rem;        /* Rounded corners for a more modern look */
+  border: none;
+  font-weight: 500;
+  font-size: 2rem;
+  cursor: pointer;
+  text-wrap: nowrap;
+  transition: 0.3s ease-in-out;
+   /* Gradient background for the button */
+  background: linear-gradient(to right, rgb(0,157,225), rgb(225,0,225));
+}
+
+.go-to-btn:hover {
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));
+  transform: scale(1.1);
+}
+
+#menu-icon {
+  display: none;
+  font-size: 3rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 12%;
+  width: 100%;
+  position: relative; 
+}
+
+home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home img {
+  margin-top: 8rem;   /* Space from the top of the page */
+  padding: 2rem;      /* Space around the image */
+  width: 20vw;          /* Set the width of the image to 20% of the viewport width */
+
+  border-radius: 50%;    /* Make the image circular */
+  border: 5px solid black; /* Add a black border around the image  in the page */
+  align-items: center;       /* Center the image vertically in the page */
+  justify-content: center;     /* Center the image horizontally in the page */
+  display: flex;                /* Use flexbox to center the image to remain in the fixed position*/
+  height: auto;                 /* Maintain the aspect ratio of the image */
+}
+
+.home-container {
+  display: flex;               /* Use flexbox for layout */
+  flex-direction: column;       /* Stack elements vertically */
+  text-align: center;           
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;                     /* Space between the heading and paragraph */
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.home-container p {
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));  /* Gradient background for the text */
+  background-clip: text;     /* Clip the background to the text */
+  color: transparent;
+  font-size: 2.25rem;       
+  font-weight: 600;
+  gap: 10rem;               /* Space between the heading and paragraph */
+}
+          /* About section styling */
+about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .about.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about img {
+  margin-top:0;
+  width: 15vw;
+  border-radius: 50%;
+  border: 5px solid black;
+  align-items: center;    
+}
+
+.infop-box {
+  display: flex;
+  flex-direction: column;      /* Stack elements vertically */
+  text-align: center;         /* Center text horizontally */
+  align-items: center;        /* Center elements vertically */
+  justify-content: center;    /* Center elements horizontally */
+  gap: 1.5rem;
+}
+
+.info-box h1 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.info-box h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.info-box p1 {
+  background: black;
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
+.info-box p2 {
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
+info-box p3 {
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 3rem;
+  margin-top: 1.25rem; /* space below cybersecurity text */
+  justify-content: center; /* Center the buttons horizontally */
+}
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials i {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Experience section styling */
+.experience .experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+/* Experience box styling */
+.experience-box {
+  display: flex;
+  color:black;
+  flex-direction:column;
+  font-size:2rem;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+/* Experience box styling */
+.language-box {
+  display: flex;
+  font-size:2rem;
+  font-weight: 500;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+/* Language box paragraph styling with gradient text */
+.language-box p {
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+}
+/* Language box heading styling */
+.language-box h2 {
+  color:black;
+  font-weight: 600;
+}
+/* Projects section styling */
+projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Projects section styling */
+.projects .project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+/* Project box styling */
+.project-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+/* Project title styling */
+.project-box h3 {
+  color:black;
+  font-weight: 600;
+  font-size:2.2rem;
+}
+/* Project title styling with gradient text */
+.project-box p{
+  background: linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));
+  background-clip: text;
+  color: transparent;
+  font-weight: 500;
+  font-size:1.8rem;
+}
+/* Projects grid styling */
+.projects-grid {            /* Use CSS Grid for layout */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; /* space between cubes */
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);    /* Subtle shadow for depth */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s ease;        /* Smooth transition for hover effect */
+}
+/* Hover effect for project cards */
+.project-card:hover {
+  transform: translateY(-5px); /* lift effect */
+}
+
+/* View project button styling */
+.view-project-btn {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  padding: 10px;
+  background:linear-gradient(to right, rgb(225,0,225), rgb(0,157,225));  /* Gradient background for the button */
+  color:whitesmoke;
+  border: none;        /* Remove default button corners */
+  border-radius: 6px;
+  cursor: pointer;
+}
+.view-project-btn:hover {
+  transform: scale(2.5); /* Slightly enlarge on hover */
+}
+
+/* Contact section styling */
+contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Contact section heading styling */
+.contact h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color:black;
+}
+
+/* Contact section Paragraph styling */
+
+.contact p {
+  background: black;
+  background-clip: text;
+  color: transparent;       /* black text color */
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* Contact information styling */
+
+.contact-info {
+  margin-top: 5rem;
+  display: flex;
+  font-size: 1.5rem;
+  padding:1rem;
+  justify-content:last baseline;      /* Align icons to the right */
+  align-items: center;
+  gap: 1rem;           /
+}
+.contact-info i {
+  font-size: 1rem;     
+  color: black;      /* black icon color */
+}
+ 
